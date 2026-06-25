@@ -344,6 +344,68 @@ input, textarea {
   border-radius: 20px;
   display: inline-block;
 }
+                
+body{
+    font-family: Arial;
+    background:#f5f5f5;
+    margin:0;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+}
+
+/* FILTER BUTTONS */
+.filters{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.filters button{
+    padding:10px 15px;
+    margin:5px;
+    border:none;
+    background:#ff6600;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.filters button:hover{
+    background:#e65c00;
+}
+
+/* CARDS */
+.menu-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.card{
+    background:white;
+    width:250px;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.card h3{
+    color:#ff6600;
+}
+
+.price{
+    font-weight:bold;
+    margin-top:10px;
+    font-size:18px;
+}
+
+.hide{
+    display:none;
+}
     
 </style>
 </head>
@@ -421,6 +483,48 @@ input, textarea {
             <h4>Rs. 1350</h4>
         </div>
 
+<!-- FILTER BUTTONS -->
+<div class="filters">
+    <button onclick="filterMenu('all')">All</button>
+    <button onclick="filterMenu('pizza')">Pizza</button>
+    <button onclick="filterMenu('burger')">Burger</button>
+    <button onclick="filterMenu('drink')">Drink</button>
+</div>
+
+<!-- MENU CARDS -->
+<div class="menu-container">
+
+    <div class="card pizza">
+        <h3>Chicken Tikka Pizza</h3>
+        <p>Loaded with cheese & chicken</p>
+        <div class="price">Rs. 999</div>
+    </div>
+
+    <div class="card pizza">
+        <h3>Cheese Lover Pizza</h3>
+        <p>Extra cheesy & creamy</p>
+        <div class="price">Rs. 1199</div>
+    </div>
+
+    <div class="card burger">
+        <h3>Beef Burger</h3>
+        <p>Juicy beef patty with sauce</p>
+        <div class="price">Rs. 450</div>
+    </div>
+
+    <div class="card burger">
+        <h3>Chicken Burger</h3>
+        <p>Crispy chicken fillet</p>
+        <div class="price">Rs. 400</div>
+    </div>
+
+    <div class="card drink">
+        <h3>Cold Drink</h3>
+        <p>Chilled refreshing drink</p>
+        <div class="price">Rs. 150</div>
+    </div>
+
+</div>
     </div>
 </section>
     <section id="hours">
