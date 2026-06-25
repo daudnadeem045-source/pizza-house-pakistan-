@@ -344,68 +344,95 @@ input, textarea {
   border-radius: 20px;
   display: inline-block;
 }
-                
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
 body{
-    font-family: Arial;
-    background:#f5f5f5;
-    margin:0;
-    padding:20px;
+  background:#f6f7fb;
+  padding:20px;
 }
 
 h1{
-    text-align:center;
+  text-align:center;
+  margin-bottom:20px;
+  color:#222;
 }
 
-/* FILTER BUTTONS */
+.menu-container{
+  max-width:1200px;
+  margin:auto;
+}
+
+/* CATEGORY BUTTONS */
 .filters{
-    text-align:center;
-    margin-bottom:20px;
+  text-align:center;
+  margin-bottom:20px;
 }
 
 .filters button{
-    padding:10px 15px;
-    margin:5px;
-    border:none;
-    background:#ff6600;
-    color:white;
-    cursor:pointer;
-    border-radius:5px;
+  border:none;
+  padding:10px 18px;
+  margin:5px;
+  border-radius:25px;
+  cursor:pointer;
+  background:#fff;
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  transition:0.3s;
 }
 
+.filters button.active,
 .filters button:hover{
-    background:#e65c00;
+  background:#ff5a1f;
+  color:#fff;
 }
 
-/* CARDS */
-.menu-container{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    justify-content:center;
+/* GRID */
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:20px;
 }
 
+/* CARD */
 .card{
-    background:white;
-    width:250px;
-    padding:15px;
-    border-radius:12px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-    text-align:center;
+  background:#fff;
+  padding:15px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
 }
 
 .card h3{
-    color:#ff6600;
+  color:#ff5a1f;
+  margin-bottom:8px;
+}
+
+.card p{
+  font-size:13px;
+  color:#555;
+  margin-bottom:10px;
 }
 
 .price{
-    font-weight:bold;
-    margin-top:10px;
-    font-size:18px;
+  font-weight:bold;
+  color:#000;
+  font-size:18px;
 }
 
 .hide{
-    display:none;
+  display:none;
 }
+                
+
     
 </style>
 </head>
@@ -483,50 +510,84 @@ h1{
             <h4>Rs. 1350</h4>
         </div>
 
-<!-- FILTER BUTTONS -->
-<div class="filters">
-    <button onclick="filterMenu('all')">All</button>
-    <button onclick="filterMenu('pizza')">Pizza</button>
-    <button onclick="filterMenu('burger')">Burger</button>
-    <button onclick="filterMenu('drink')">Drink</button>
-</div>
-
-<!-- MENU CARDS -->
 <div class="menu-container">
 
-    <div class="card pizza">
-        <h3>Chicken Tikka Pizza</h3>
-        <p>Loaded with cheese & chicken</p>
-        <div class="price">Rs. 999</div>
-    </div>
+<h1>🍕 Our Signature Menu</h1>
 
-    <div class="card pizza">
-        <h3>Cheese Lover Pizza</h3>
-        <p>Extra cheesy & creamy</p>
-        <div class="price">Rs. 1199</div>
-    </div>
+<div class="filters">
+  <button class="active" onclick="filterMenu('all')">All</button>
+  <button onclick="filterMenu('pizza')">Pizza</button>
+  <button onclick="filterMenu('burger')">Burger</button>
+  <button onclick="filterMenu('drink')">Drink</button>
+</div>
 
-    <div class="card burger">
-        <h3>Beef Burger</h3>
-        <p>Juicy beef patty with sauce</p>
-        <div class="price">Rs. 450</div>
-    </div>
+<div class="menu-grid">
 
-    <div class="card burger">
-        <h3>Chicken Burger</h3>
-        <p>Crispy chicken fillet</p>
-        <div class="price">Rs. 400</div>
-    </div>
+  <!-- PIZZA -->
+  <div class="card pizza">
+    <h3>Chicken Fajita Pizza</h3>
+    <p>Loaded with grilled chicken & sauce</p>
+    <div class="price">Rs. 999</div>
+  </div>
 
-    <div class="card drink">
-        <h3>Cold Drink</h3>
-        <p>Chilled refreshing drink</p>
-        <div class="price">Rs. 150</div>
-    </div>
+  <div class="card pizza">
+    <h3>Cheese Lover Pizza</h3>
+    <p>Extra cheesy creamy taste</p>
+    <div class="price">Rs. 1199</div>
+  </div>
+
+  <div class="card pizza">
+    <h3>BBQ Pizza</h3>
+    <p>Smoky BBQ chicken topping</p>
+    <div class="price">Rs. 1299</div>
+  </div>
+
+  <!-- BURGER -->
+  <div class="card burger">
+    <h3>Beef Burger</h3>
+    <p>Juicy beef patty with sauce</p>
+    <div class="price">Rs. 450</div>
+  </div>
+
+  <div class="card burger">
+    <h3>Chicken Burger</h3>
+    <p>Crispy chicken fillet</p>
+    <div class="price">Rs. 400</div>
+  </div>
+
+  <!-- DRINK -->
+  <div class="card drink">
+    <h3>Cold Drink</h3>
+    <p>Refreshing chilled beverage</p>
+    <div class="price">Rs. 150</div>
+  </div>
 
 </div>
-    </div>
-</section>
+
+</div>
+
+<script>
+function filterMenu(category){
+  let cards = document.querySelectorAll('.card');
+  let buttons = document.querySelectorAll('.filters button');
+
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+
+  cards.forEach(card=>{
+    if(category === 'all'){
+      card.classList.remove('hide');
+    }else{
+      if(card.classList.contains(category)){
+        card.classList.remove('hide');
+      }else{
+        card.classList.add('hide');
+      }
+    }
+  });
+}
+</script>
+
     <section id="hours">
     <h2>Opening Hours</h2>
     <p>Monday - Sunday: 11:00 AM - 2:00 PM</p>
