@@ -207,6 +207,179 @@ color:white;
 text-align:center;
 padding:20px;
 }
+ #blog{
+    padding:60px 20px;
+    background:#f8f8f8;
+}
+
+#blog h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.blog-post{
+    background:#fff;
+    padding:20px;
+    margin:20px auto;
+    max-width:900px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.blog-post h3{
+    color:#ff5722;
+    margin-bottom:10px;
+}
+
+.blog-post p{
+    line-height:1.7;
+}
+ /* Pizza Sizes */
+
+#sizes{
+    padding:60px 20px;
+    background:#fff;
+    text-align:center;
+}
+
+#sizes h2{
+    font-size:36px;
+    margin-bottom:30px;
+    color:#ff5722;
+}
+
+.size-card{
+    background:#f8f8f8;
+    max-width:800px;
+    margin:15px auto;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.size-card h3{
+    color:#222;
+    margin-bottom:10px;
+}
+
+/* Our Promise */
+
+#promise{
+    padding:60px 20px;
+    text-align:center;
+    background:#fff;
+}
+
+#promise h2{
+    color:#ff5722;
+    margin-bottom:20px;
+}
+
+#promise p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+    color:#555;
+}
+
+/* Fun Pizza Facts */
+
+#facts{
+    padding:60px 20px;
+    background:#fff5f0;
+    text-align:center;
+}
+
+#facts h2{
+    color:#ff5722;
+    margin-bottom:25px;
+}
+
+#facts p{
+    background:#fff;
+    max-width:800px;
+    margin:15px auto;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,.1);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    #sizes h2,
+    #promise h2,
+    #facts h2{
+        font-size:28px;
+    }
+
+    .size-card,
+    #facts p{
+        margin:10px;
+    }
+}
+ #services{
+    padding:60px 20px;
+    text-align:center;
+    background:#f8f8f8;
+}
+
+#services h2{
+    color:#ff5722;
+    margin-bottom:30px;
+}
+
+.service-box{
+    background:#fff;
+    max-width:800px;
+    margin:15px auto;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.service-box h3{
+    margin-bottom:10px;
+}
+ #mission{
+    padding:60px 20px;
+    background:#fff5f0;
+    text-align:center;
+}
+
+#mission h2{
+    color:#ff5722;
+    margin-bottom:20px;
+    font-size:36px;
+}
+
+#mission p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+    color:#555;
+    font-size:18px;
+}
+ #team{
+    padding:60px 20px;
+    background:#f8f8f8;
+    text-align:center;
+}
+
+#team h2{
+    color:#ff5722;
+    margin-bottom:30px;
+}
+
+.team-card{
+    background:#fff;
+    max-width:800px;
+    margin:15px auto;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
 
 </style>
 </head>
@@ -222,6 +395,7 @@ padding:20px;
 <li><a href="#about">About</a></li>
 <li><a href="#contact">Contact</a></li>
 <li><a href="#privacy">Privacy Policy</a></li>
+ <li><a href="#blog">Blog</a></li>
 </ul>
 </nav>
 
@@ -372,6 +546,39 @@ Pizza House Pakistan is committed to delivering great taste and quality in every
 <p>Friendly customer service</p>
 
 </section>
+ <section id="sizes">
+<h2>Pizza Sizes</h2>
+
+<div class="size-card">
+<h3>Small Pizza</h3>
+<p>Perfect for one person.</p>
+</div>
+
+<div class="size-card">
+<h3>Medium Pizza</h3>
+<p>Best for sharing with friends.</p>
+</div>
+
+<div class="size-card">
+<h3>Large Pizza</h3>
+<p>Ideal for family gatherings.</p>
+</div>
+</section>
+ <section id="promise">
+<h2>Our Promise</h2>
+
+<p>
+We promise to serve fresh, delicious, and high-quality pizzas
+made with the finest ingredients.
+</p>
+</section>
+ <section id="facts">
+<h2>Fun Pizza Facts</h2>
+
+<p>Pizza is one of the most popular foods in the world.</p>
+<p>Millions of pizzas are enjoyed every day.</p>
+<p>Cheese is the most popular pizza topping ingredient.</p>
+</section>
 <section id="location">
 <h2>Our Location</h2>
 <p>Visit Pizza House Pakistan for fresh and delicious pizzas.</p>
@@ -391,6 +598,37 @@ Pizza House Pakistan is committed to delivering great taste and quality in every
 <section id="contact">
 
 <div class="contact-container">
+ <section id="services">
+    <h2>Our Services</h2>
+
+```
+<div class="service-box">
+    <h3>Fast Delivery</h3>
+    <p>Hot and fresh pizzas delivered quickly to your doorstep.</p>
+</div>
+
+<div class="service-box">
+    <h3>Online Ordering</h3>
+    <p>Easy and convenient online ordering process.</p>
+</div>
+
+<div class="service-box">
+    <h3>Family Deals</h3>
+    <p>Special discounts and value meals for families.</p>
+</div>
+```
+
+</section>
+ <section id="mission">
+    <h2>Our Mission</h2>
+
+    <p>
+        Our mission is to provide fresh, delicious, and high-quality pizzas
+        while delivering exceptional customer service. We strive to make every
+        order a memorable experience for our customers.
+    </p>
+</section>
+
 
 <h2>Contact Us</h2>
 
@@ -434,6 +672,24 @@ Our team will respond as soon as possible.
 </div>
 
 </section>
+ <section id="team">
+    <h2>Meet Our Team</h2>
+
+    <div class="team-card">
+        <h3>Expert Chefs</h3>
+        <p>Our experienced chefs prepare every pizza with care and passion.</p>
+    </div>
+
+    <div class="team-card">
+        <h3>Delivery Staff</h3>
+        <p>Our delivery team ensures your pizza arrives fresh and hot.</p>
+    </div>
+
+    <div class="team-card">
+        <h3>Customer Support</h3>
+        <p>Friendly support to help customers with orders and inquiries.</p>
+    </div>
+</section>
 
 <section id="privacy">
 
@@ -445,6 +701,134 @@ Hum aap ki personal information kisi third party ke saath share nahi karte.
 Website use karne se aap is privacy policy se agree karte hain.
 </p>
 
+</section>
+ <section id="blog">
+    <h2>Pizza Blog</h2>
+
+    <div class="blog-post">
+        <h3>Why Pizza is the World's Favorite Food</h3>
+        <p>Pizza is one of the most popular foods in the world because of its delicious taste and variety of toppings.
+         # Top 5 Reasons to Order Pizza Online
+
+Online pizza ordering has become more popular than ever. It saves time, offers convenience, and allows customers to enjoy their favorite meals from home.
+
+Benefits:
+
+* Fast ordering process
+* Easy payment options
+* Home delivery service
+* Special online discounts
+* Fresh and hot pizzas delivered to your door
+
+Pizza House Pakistan is committed to providing a simple and enjoyable online ordering experience for all customers.
+ </p>
+    </div>
+
+    <div class="blog-post">
+        <h3>Top 5 Reasons to Order Pizza Online</h3>
+        <p>Online pizza ordering saves time, offers convenience, and allows customers to enjoy fresh pizza at home.
+        # How Fresh Ingredients Make Better Pizza
+
+The secret behind a great pizza is the quality of its ingredients. Fresh vegetables, premium cheese, quality chicken, and homemade dough create a delicious taste.
+
+At Pizza House Pakistan, we carefully select ingredients to ensure every pizza is fresh and flavorful.
+
+Fresh ingredients provide:
+
+* Better taste
+* Higher quality
+* Improved texture
+* Greater customer satisfaction
+
+That's why freshness is our top priority.
+        </p>
+    </div>
+
+    <div class="blog-post">
+        <h3>How Fresh Ingredients Make Better Pizza</h3>
+        <p>Fresh vegetables, premium cheese, and quality chicken create the perfect pizza experience.
+        # Best Pizza Flavors for Every Pizza Lover
+
+Everyone has a favorite pizza flavor. Some prefer spicy pizzas while others enjoy classic cheese varieties.
+
+Popular choices include:
+
+* Chicken Fajita Pizza
+* BBQ Chicken Pizza
+* Pepperoni Pizza
+* Margherita Pizza
+* Supreme Pizza
+
+No matter your preference, Pizza House Pakistan offers delicious options for every pizza lover.
+        </p>
+    </div>
+
+    <div class="blog-post">
+        <h3>Best Pizza Flavors for Every Pizza Lover</h3>
+        <p>From Chicken Fajita to BBQ Chicken, there is a perfect pizza flavor for everyone.
+        # The Secret Behind a Perfect Pizza Crust
+
+A great pizza is not only about cheese and toppings. The crust is one of the most important parts of a delicious pizza. A perfect crust should be crispy on the outside and soft on the inside.
+
+At Pizza House Pakistan, we prepare our pizza dough using quality ingredients and proper baking techniques. This helps create a crust that is flavorful, fresh, and satisfying with every bite.
+
+## What Makes a Great Pizza Crust?
+
+* Freshly prepared dough
+* Quality flour
+* Proper baking temperature
+* Perfect balance of softness and crispiness
+
+## Why Customers Love Fresh Crust
+
+A fresh crust improves the overall pizza experience. It holds toppings perfectly, adds texture, and enhances the taste of every slice.
+
+Whether you enjoy Chicken Fajita, BBQ Chicken, or Margherita Pizza, a well-made crust makes every pizza even more enjoyable.
+
+At Pizza House Pakistan, we focus on quality from the first ingredient to the final slice.
+        </p>
+    </div>
+  <div class="Blog-post">
+   <h3>Why Pizza is Best for Family Gathering</h3>
+   <p># Pizza is one of the best foods for family gatherings and celebrations. It is easy to share, comes in many flavors, and brings people together around one table.
+
+Whether it is a birthday party, weekend dinner, or special occasion, pizza is always a popular choice. Different family members can enjoy different toppings while sharing the same meal.
+
+## Benefits of Choosing Pizza for Events
+
+* Easy to serve
+* Suitable for all ages
+* Available in many flavors
+* Great value for groups
+* Perfect for celebrations
+
+## A Pizza for Everyone
+
+Some people enjoy spicy Chicken Fajita Pizza, while others prefer classic Margherita or BBQ Chicken Pizza. The variety of choices makes pizza a favorite meal for families.
+
+At Pizza House Pakistan, we are proud to provide fresh and delicious pizzas that help create memorable moments with family and friends.
+</p>
+  </div>
+  <div class="Blog-post">
+   <h3>The Importance of Quality Chesse in Pizza </h3>
+   <p>#Cheese is one of the most important ingredients in a pizza. It gives pizza its rich flavor, creamy texture, and delicious appearance. Without quality cheese, even the best toppings cannot create the perfect pizza experience.
+
+At Pizza House Pakistan, we understand the importance of using fresh and high-quality cheese. Every pizza is prepared with care to ensure the perfect balance of flavor and texture.
+
+## Benefits of Quality Cheese
+
+* Rich and creamy taste
+* Perfect melting texture
+* Better pizza appearance
+* Enhanced overall flavor
+
+## Why Customers Love Cheesy Pizza
+
+A perfectly baked pizza with melted cheese creates an unforgettable experience. Whether you choose Chicken Fajita, BBQ Chicken, or Margherita Pizza, quality cheese makes every bite more enjoyable.
+
+Our goal is to serve pizzas that are fresh, delicious, and full of flavor for every customer.
+</p>
+  </div>
 </section>
 
 <a href="https://wa.me/+923259632190"
